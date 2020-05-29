@@ -11,7 +11,7 @@ Main Text:	#cfcfcf;
 green text:	#039e5c; OLD*#029c80;*
 hover text:	#04de80; OLD*#0ee8c0;*
 Titles:		#efefef;
- 
+
  */
 /* -------------------------------------------------------- TRANSLATION*/
 nt{
@@ -381,6 +381,41 @@ a:hover, a:active{
 	color:#ffffff;
 	}
 
+	/* -------------------------------------------------------- 주석 관련 */
+
+	.box{
+		font-size:x-small;
+		vertical-align:text-top;
+	}
+
+	/* -------------------------------------------------------- 코드 문법 관련 */
+
+	.code{
+		font-family:Consolas,monospace;
+		background:#181818;
+		color:#cfcfcf;
+		padding:20px 20px 20px 20px;
+		margin-left:50px;
+		margin-right:50px;
+		text-justify: none;
+		text-align: left;
+		border-radius: 10px;
+	}
+
+	.TAB{
+		white-space:pre-wrap;
+		tab-size:4;
+	}/* 탭 키를 설정합니다.*/
+
+	.C0{color:#FFB871;}/* 함수 */
+	.C1{color:#FF8080;}/* 상수 */
+	.C2{color:#FFFF00;}/* 문자열 */
+	.C3{color:#5B995B;}/* 주석 */
+	.C4{color:#58E55A;}/* 내장 변수*/
+	.C5{color:#B2B1FF;}/* 객체 변수*/
+	.C6{color:#FFF899;}/* 임시 변수*/
+	.C7{color:#FF7EFF;}/* 전역 변수*/
+
 /* -------------------------------------------------------- EXTRAS */
 .code{
 	font-family:monospace;
@@ -433,9 +468,9 @@ iframe{
 	max-width: 800px;
 	border-radius:0.5em;
 	}
-	
+
 /* -------------------------------------------------------- BODY HEADER AND FOOTER */
-	
+
 .body-scroll{
 	  display: block;
 	  position: absolute;
@@ -447,7 +482,7 @@ iframe{
 	  margin-right:auto;
 	  overflow-y:auto;
 	}
-	
+
 .footer{
 	  position:absolute;
 	  bottom:0;
@@ -455,7 +490,7 @@ iframe{
 	  height: 70px;
 	  left:0;
 	}
-	
+
 .buttons{
 	  position:relative;
 	  width:100%;
@@ -477,7 +512,7 @@ iframe{
 	border-width: 4px;
 	border-color: #000000;
 }
- 
+
 ::-webkit-scrollbar-thumb {
     background-color: #444444;
 	-webkit-border-radius: 5px;
@@ -490,7 +525,7 @@ iframe{
  ::-webkit-scrollbar-thumb:active {
     background-color: #039e5c;
 }
- 
+
 ::-webkit-scrollbar-button {
       background-color: #808080;
 }
@@ -518,7 +553,7 @@ iframe{
 	width: 14px;
 	display: block;
 }
- 
+
 ::-webkit-scrollbar-button:end:increment:vertical:active {
 	background-position: -14px -14px;
 }
@@ -546,7 +581,7 @@ iframe{
 	width: 14px;
 	display: block;
 }
- 
+
 ::-webkit-scrollbar-button:end:increment:horizontal:active {
 	background-position: -42px -14px;
 }
