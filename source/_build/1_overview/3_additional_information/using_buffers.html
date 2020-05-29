@@ -172,33 +172,29 @@ class="box">*</span></span> 정렬만을 사용해야 합니다. 많은 계산�
 <a name="buffer_data_types" id="buffer_data_types"></a>
 <label class="collapse" for="three">버퍼 데이터 유형</label>
 <input id="three" type="checkbox">
-<div class="index_list">When reading and writing data to a buffer,
-you do it in ''chunks'' of data defined by their '''data type'''.
-The '''data type''' sets the number of bytes allocated within the
-buffer for the value being written, and it is essential that you
-get this correct otherwise you will get some very strange results
-(or even errors) for your code.<br>
+<div class="index_list">
+
+버퍼를 읽고 쓸 때, '''<span title="data type">데이터 타입<span class="box">*</span></span>'''이 정의된 데이터의 ''<span title="chunks">청크<span class="box">*</span></span>''안에다가 무언가 해야 합니다.
+이 '''데이터 타입'''은 얼만큼의 byte를 할당하는지 설정해주는 값입니다.
+이건 항상 확인해야 합니다. 그렇지 않으면, 잘못된 값이 나오거나 오류가 발생할 수 있습니다.<br>
 <br>
-Buffers are written to (and read from) <i>sequentially</i>, in that
-one piece of data is written after another, with each piece of data
-being of a set type. This means that you should ideally be aware of
-what data you are writing to the buffer at all times. These <b>data
-types</b> are defined in GML by the following <i>constants</i>:
+버퍼는 <i>순차적으로</i> 쓰거나 읽습니다.
+즉, 하나의 데이터가 쓰이면 다음에 다른 데이터가 쓰일겁니다.
+각각의 데이터는 쓰기 전에 유형을 설정해야 합니다. 그러므로, 적절한 데이터를 쓰기 위해서는 미리 알고 있어야 합니다. 아래의 <b>데이터 유형</b>은 GML에서 <i>상수</i>로 정의됐습니다:
 
 <div class="compat">
 <table>
 <tr>
-<th>Data Type Constant</th>
-<th>Bytes</th>
-<th>Description</th>
+<th>데이터 유형 상수</th>
+<th>Byte</th>
+<th>설명</th>
 </tr>
 
 <tr>
 <td>buffer_u8</td>
 <td>1</td>
 <td><br>
-An unsigned, 8bit integer. This is a positive value from 0 to
-255.<br>
+부호없는 8 비트 정수로, 0 ~ 255 값입니다.<br>
 <br></td>
 </tr>
 
@@ -206,8 +202,7 @@ An unsigned, 8bit integer. This is a positive value from 0 to
 <td>buffer_s8</td>
 <td>1</td>
 <td><br>
-A signed, 8bit integer. This can be a positive or negative value
-from -128 to 127 (0 is classed as positive).<br>
+부호있는 8 비트 정수로, -128 ~ 127 값입니다. (0은 양수로 분류).<br>
 <br></td>
 </tr>
 
@@ -215,8 +210,7 @@ from -128 to 127 (0 is classed as positive).<br>
 <td>buffer_u16</td>
 <td>2</td>
 <td><br>
-An unsigned, 16bit integer. This is a positive value from 0 -
-65,535.<br>
+부호없는 16 비트 정수로, 0 ~ 65,535 값입니다.<br>
 <br></td>
 </tr>
 
@@ -224,8 +218,7 @@ An unsigned, 16bit integer. This is a positive value from 0 -
 <td>buffer_s16</td>
 <td>2</td>
 <td><br>
-A signed, 16bit integer. This can be a positive or negative value
-from -32,768 to 32,767 (0 is classed as positive).<br>
+부호있는 16 비트 정수로, -32,768 ~ 32,767 값입니다. (0은 양수로 분류).<br>
 <br></td>
 </tr>
 
@@ -233,9 +226,7 @@ from -32,768 to 32,767 (0 is classed as positive).<br>
 <td>buffer_f16</td>
 <td>2</td>
 <td><br>
-A 16bit floating point number. This can be a positive or negative
-value within the range of +/- 65504. <b>(Not currently
-supported!)</b><br>
+16 비트 부동 소수점 숫자로, ±65504 범위 내에서 실수 값입니다. <b>(현재 지원되지 않음!)</b><br>
 <br></td>
 </tr>
 
@@ -243,8 +234,7 @@ supported!)</b><br>
 <td>buffer_u32</td>
 <td>4</td>
 <td><br>
-An unsigned, 32bit integer. This is a positive value from 0 to
-4,294,967,295.<br>
+부호없는 32 비트 정수로, 0 ~ 4,294,967,295 값입니다.<br>
 <br></td>
 </tr>
 
@@ -252,9 +242,7 @@ An unsigned, 32bit integer. This is a positive value from 0 to
 <td>buffer_s32</td>
 <td>4</td>
 <td><br>
-A signed, 32bit integer. This can be a positive or negative value
-from -2,147,483,648 to 2,147,483,647 (0 is classed as
-positive).<br>
+부호있는 32 비트 정수로, -2,147,483,648 ~ 2,147,483,647 값입니다. (0은 양수로 분류).<br>
 <br></td>
 </tr>
 
@@ -262,8 +250,7 @@ positive).<br>
 <td>buffer_f32</td>
 <td>4</td>
 <td><br>
-A 32bit floating point number. This can be a positive or negative
-value within the range of +/-16777216.<br>
+32 비트 부동 소수점 숫자로, ±16777216 범위 내에서 실수 값입니다.<br>
 <br></td>
 </tr>
 
@@ -271,8 +258,7 @@ value within the range of +/-16777216.<br>
 <td>buffer_u64</td>
 <td>8</td>
 <td><br>
-A 64bit unsigned integer value.<b>(Not currently supported by all
-buffer functions!)</b><br>
+부호없는 64 비트 정수 값입니다. <b>(현재 모든 버퍼 기능에서 지원되는 것은 아닙니다!)</b><br>
 <br></td>
 </tr>
 
@@ -280,7 +266,7 @@ buffer functions!)</b><br>
 <td>buffer_f64</td>
 <td>8</td>
 <td><br>
-A 64bit floating point number.<br>
+64 비트 부동 소수점 숫자로, 실수 값입니다.<br>
 <br></td>
 </tr>
 
@@ -288,8 +274,7 @@ A 64bit floating point number.<br>
 <td>buffer_bool</td>
 <td>1</td>
 <td><br>
-A boolean value. Can only be either 1 or 0 (<tt>true</tt> or
-<tt>false</tt>)<br>
+1 또는 0 만 가능한 <span title="boolean">부울<span class="box">*</span></span> 값입니다. (<tt>true</tt> 또는 <tt>false</tt>)<br>
 <br></td>
 </tr>
 
@@ -297,9 +282,7 @@ A boolean value. Can only be either 1 or 0 (<tt>true</tt> or
 <td>buffer_string</td>
 <td>N/A</td>
 <td><br>
-This is a UTF-8 null terminated (0x00) string. Basically a
-GameMaker string is dumped in the buffer, and a 0 is put at the
-end.<br>
+UTF-8로 인코딩된 문자값로 저장되고, 끝에 문자 종료을 뜻하는 NULL (0x00) 값이 들어갑니다. 다시말해, 기본적으로 문자열 변수가 버퍼에 복사되고, 끝에 0이 추가됩니다.<br>
 <br></td>
 </tr>
 </table>
